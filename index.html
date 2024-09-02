@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connect App</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="./styles.css" rel="stylesheet">
+
 </head>
 <body>
     <!--Announcements-->
     <div class="alert alert-success mb-0" role="alert">
-        <a class="alert-heading" href="#"><h4 class="alert-heading">A New Announcement</h4></a>
-        <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+        <a class="alert-heading" href=""><h4 class="alert-heading">A New Announcement</h4></a>
+        <p>The Internal Hackathon For The SIH 2024 Ts Scheluded On 3rd And 4rt Of September 2024</p>
         <hr>
-        <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+        <p class="mb-0">TOP 25 Teams will be selected for the next round.
+            Make sure you participate.</p>
     </div>
-
 
 
     <!--Navbar-->
@@ -42,36 +44,36 @@
                 font-size: 1.2rem;
             }
             .nav-link:hover {
-                color: #ffd700 !important; /* Gold color on hover */
+                color: rgb(175, 240, 175) !important; /* Gold color on hover */
             }
         </style>
     </head>
     <body>
     
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand mx-auto" href="#">CONNECT APP</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Explore Page</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sign In</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Log IN</a>
-                    </li>
-                </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">CONNECT APP</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link px-5" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-5" href="./explore.html">Explore Page</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-5" href="signup.html">Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-5" href="./login.html">Log In</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     </body>
@@ -79,7 +81,7 @@
     
 
     <!-- Scrollable widgit-->
-    <h1 class="text-center p-5">Acheivements</h1>
+    <h1 class="text-center p-5">Our Alumni Acheivements</h1>
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -97,103 +99,141 @@
         </style>
     </head>
     <body>
-        <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <!-- First slide with 3 cards -->
-                <div class="carousel-item active">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="p-5" style="width: 18rem;">
-                                <img src="./Moon.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card 1</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="">
-                                      <button type="button" class="btn btn-outline-secondary">Secondary</button>
-                                    </a>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Card Carousel</title>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+            <style>
+                /* Custom arrow color */
+                .carousel-control-prev-icon,
+                .carousel-control-next-icon {
+                    background-color: #000;
+                }
+        
+                /* Adjust the position of carousel controls */
+                .carousel-control-prev,
+                .carousel-control-next {
+                    width: 5%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+        
+                /* Center the cards and add margin */
+                .carousel-item .card {
+                    margin: 0 auto;
+                    max-width: 95%;
+                }
+        
+                /* Add padding to the carousel item */
+                .carousel-item {
+                    padding: 0 5%;
+                }
+            </style>
+        </head>
+        <body>
+            <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <!-- First slide with 3 cards -->
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="p-5 card">
+                                    <img src="./Moon.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Achievement 1</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <a href="#" class="">
+                                            <button type="button" class="btn btn-outline-success">Read More</button>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="p-5" style="width: 18rem;">
-                                <img src="./Moon.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card 2</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="">
-                                      <button type="button" class="btn btn-outline-secondary">Secondary</button>
-                                    </a>
+                            <div class="col-md-4">
+                                <div class="p-5 card">
+                                    <img src="./Moon.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Achievement 2</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <a href="#" class="">
+                                            <button type="button" class="btn btn-outline-success">Read More</button>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="p-5" style="width: 18rem;">
-                                <img src="./Moon.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card 3</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="">
-                                      <button type="button" class="btn btn-outline-secondary">Secondary</button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Second slide with 3 cards -->
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="p-5" style="width: 18rem;">
-                                <img src="./Moon.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card 4</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="">
-                                      <button type="button" class="btn btn-outline-secondary">Secondary</button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="p-5" style="width: 18rem;">
-                                <img src="./Moon.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card 5</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="">
-                                      <button type="button" class="btn btn-outline-secondary">Secondary</button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="p-5" style="width: 18rem;">
-                                <img src="./Moon.jpg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card 6</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="">
-                                      <button type="button" class="btn btn-outline-secondary">Secondary</button>
-                                    </a>
+                            <div class="col-md-4">
+                                <div class="p-5 card">
+                                    <img src="./Moon.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Achievement 3</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <a href="#" class="">
+                                            <button type="button" class="btn btn-outline-success">Read More</button>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- Second slide with 3 cards -->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="p-5 card">
+                                    <img src="./Moon.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Achievement 4</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <a href="#" class="">
+                                            <button type="button" class="btn btn-outline-success">Read More</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-5 card">
+                                    <img src="./Moon.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Achievement 5</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <a href="#" class="">
+                                            <button type="button" class="btn btn-outline-success">Read More</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="p-5 card">
+                                    <img src="./Moon.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Achievement 6</h5>
+                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        <a href="#" class="">
+                                            <button type="button" class="btn btn-outline-success">Read More</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more slides as needed -->
                 </div>
-                <!-- Add more slides as needed -->
-
-
+                <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
+        
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        </body>
+        </html>
+        
     
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
@@ -209,39 +249,49 @@
 
 
      <div class="container px-4 py-5" id="featured-3">
-      <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-5">
         <!-- First Column -->
         <div class="feature col">
           <h3 class="fs-2 text-body-emphasis">Donations</h3>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-          <a href="#" class="icon-link">
-            <button type="button" class="btn btn-dark">Dark</button>
+          <p>To contribute donations easily and 
+            support various initiatives and projects undertaken by the college, fostering a culture of philanthropy. .</p>
+          <a href="./donation.html" class="icon-link">
+            <button type="button" class="btn btn-dark">More</button>
           </a>
         </div>
         <!-- Second Column -->
         <div class="feature col">
           <h3 class="fs-2 text-body-emphasis">Reunion/Meet</h3>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+          <p>Alumni events, reunions to maintain engagement and connection. Meet your batch mates and your fellow peers by hosting a reunion or meet.</p>
           <a href="#" class="icon-link">
-            <button type="button" class="btn btn-dark">Dark</button>
+            <button type="button" class="btn btn-dark">More</button>
           </a>
         </div>
         <!-- Third Column -->
         <div class="feature col">
           <h3 class="fs-2 text-body-emphasis">Mentoring</h3>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-          <a href="#" class="icon-link">
-            <button type="button" class="btn btn-dark">Dark</button>
+          <p>Organise events,workshops, and professional development sessions to help your juniors learn about cutting edge technolgies.</p>
+          <a href="./mentoring.html" class="icon-link">
+            <button type="button" class="btn btn-dark">More</button>
           </a>
         </div>
         <!-- Fourth Column -->
         <div class="feature col">
           <h3 class="fs-2 text-body-emphasis">Job Postings</h3>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-          <a href="#" class="icon-link">
-            <button type="button" class="btn btn-dark">Dark</button>
+          <p>Enabling alumni to explore career opportunities, post job openings, and connect with potential employers within 
+            the alumni network.</p>
+          <a href="./job.html" class="icon-link">
+            <button type="button" class="btn btn-dark">More</button>
           </a>
         </div>
+        <!--Fifth Column-->
+        <div class="feature col">
+            <h3 class="fs-2 text-body-emphasis">Feedback/Survey</h3>
+            <p>Provide feedback on your experiences, suggest improvements, and participate in surveys to help shape future initiatives of the association.</p>
+            <a href="./feedback.html" class="icon-link">
+              <button type="button" class="btn btn-dark">More</button>
+            </a>
+          </div>
       </div>
   </div>
 
@@ -330,18 +380,15 @@
                              <option value="web-development">Web Development</option>
                              <option value="ai">Artificial Intelligence</option>
                              <option value="cloud-computing">Cloud Computing</option>
-                         </select>
+                             <option value="None">None</option>
+                            </select>
      
                          <!-- Textarea for tweet content -->
-                         <textarea placeholder="What's happening?"></textarea>
+                         <textarea placeholder="Share Your Thoughts!"></textarea>
                          
                          <!-- File upload options and submit button -->
                          <div class="tweet-actions">
                              <div class="d-flex align-items-center">
-                                 <label class="upload-icons">
-                                     <i class="bi bi-image" data-bs-toggle="tooltip" data-bs-placement="top" title="Upload Image"></i>
-                                     <input type="file" accept="image/*">
-                                 </label>
                                  <label class="upload-icons">
                                      <i class="bi bi-file-earmark" data-bs-toggle="tooltip" data-bs-placement="top" title="Upload File">Upload Images</i>
                                      <input type="file">
@@ -351,7 +398,7 @@
                                      <input type="file" accept="video/*">
                                  </label>
                              </div>
-                             <button type="submit" class="btn btn-primary">Tweet</button>
+                             <button type="submit" class="btn btn-primary">Upload</button>
                          </div>
                      </form>
                  </div>
@@ -377,55 +424,18 @@
 
     <!--Footer-->
 
-    <div class="container">
-      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
-        <div class="col mb-3">
-          <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-          </a>
-          <p class="text-body-secondary">© 2024</p>
-        </div>
-    
-        <div class="col mb-3">
-    
-        </div>
-    
-        <div class="col mb-3">
-          <h5>Section</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-          </ul>
-        </div>
-    
-        <div class="col mb-3">
-          <h5>Section</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-          </ul>
-        </div>
-    
-        <div class="col mb-3">
-          <h5>Section</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-          </ul>
-        </div>
+    <footer class="my-5 pt-5 text-body-secondary text-center text-small">
+        <hr/>
+        <p class="mb-1">© 2024– Connect App</p>
+        <p class="mb-1">All Rights Reserved</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="./privacy.html">Privacy</a></li>
+          <li class="list-inline-item"><a href="./terms.html">Terms</a></li>
+          <li class="list-inline-item"><a href="./support.html">Support</a></li>
+          <li class="list-inline-item"><a href="./about.html">About Us</a></li>
+     
+        </ul>
       </footer>
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
