@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reunion Registration Form - Class of 2005</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 60%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .form-group {
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #004d99;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background-color: #003d80;
+        }
+
+        small {
+            display: block;
+            margin-top: 5px;
+            color: #666;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Reunion Registration Form - Class of 2005</h1>
+        <form id="registrationForm" action="submit-registration.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <div id="nameError" class="error"></div>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <div id="emailError" class="error"></div>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+            <small>Enter a 10-digit phone number.</small>
+            <div id="phoneError" class="error"></div>
+
+            <label for="department">Department:</label>
+            <input type="text" id="department" name="department" required>
+            <div id="departmentError" class="error"></div>
+
+            <div class="form-group">
+                <label>How do you intend to attend the reunion?</label>
+                <label><input type="radio" name="attendance" value="confirmed" required> Confirmed</label>
+                <label><input type="radio" name="attendance" value="undecided" required> Undecided</label>
+                <label><input type="radio" name="attendance" value="cannot-attend" required> Cannot Attend</label>
+                <div id="attendanceError" class="error"></div>
+            </div>
+
+            <label for="feedback">Feedback/Suggestions for the Reunion:</label>
+            <textarea id="feedback" name="feedback" rows="4"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            let valid = true;
+
+            // Clear previous errors
+            document.querySelectorAll('.error').forEach(el => el.textContent = '');
+
+            // Validate name
+            const name = document.getElementById('name').value.trim();
+            if (name === '') {
+                document.getElementById('nameError').textContent = 'Name is required.';
+                valid = false;
+            }
+
+            // Validate email
+            const email = document.getElementById('email').value.trim();
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+                valid = false;
+            }
+
+            // Validate phone
+            const phone = document.getElementById('phone').value.trim();
+            const phonePattern = /^[0-9]{10}$/;
+            if (!phonePattern.test(phone)) {
+                document.getElementById('phoneError').textContent = 'Please enter a valid 10-digit phone number.';
+                valid = false;
+            }
+
+            // Validate department
+            const department = document.getElementById('department').value.trim();
+            if (department === '') {
+                document.getElementById('departmentError').textContent = 'Department is required.';
+                valid = false;
+            }
+
+            // Validate attendance
+            const attendance = document.querySelector('input[name="attendance"]:checked');
+            if (!attendance) {
+                document.getElementById('attendanceError').textContent = 'Please select an attendance option.';
+                valid = false;
+            }
+
+            // Prevent form submission if invalid
+            if (!valid) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
