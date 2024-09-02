@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Opportunities</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">CONNECT APP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Job Opportunities Section -->
+    <div class="container my-5">
+        <h1 class="text-center">Job Opportunities</h1>
+        <div class="d-flex justify-content-center mt-4">
+            <button type="button" class="btn btn-primary mx-2" id="postJobBtn">Post Job</button>
+            <button type="button" class="btn btn-secondary mx-2" id="lookingForJobBtn">Looking for Job</button>
+        </div>
+
+        <!-- Post Job Form -->
+        <form id="postJobForm" class="mt-5 hidden">
+            <h2>Post a Job</h2>
+            <div class="mb-3">
+                <label for="jobDescription" class="form-label">Describe the Job Opportunity</label>
+                <textarea class="form-control" id="jobDescription" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="companyName" class="form-label">Company</label>
+                <input type="text" class="form-control" id="companyName" required>
+            </div>
+            <div class="mb-3">
+                <label for="designation" class="form-label">Designation</label>
+                <input type="text" class="form-control" id="designation" required>
+            </div>
+            <div class="mb-3">
+                <label for="skills" class="form-label">Required Skills</label>
+                <input type="text" class="form-control" id="skills" required>
+            </div>
+            <div class="mb-3">
+                <label for="salaryRange" class="form-label">Salary Range Offered</label>
+                <input type="text" class="form-control" id="salaryRange" required>
+            </div>
+            <div class="mb-3">
+                <label for="otherDetails" class="form-label">Other Details</label>
+                <textarea class="form-control" id="otherDetails" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email ID</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" required>
+            </div>
+            <div class="mb-3">
+                <label for="additionalInfo" class="form-label">Other Information (If required)</label>
+                <textarea class="form-control" id="additionalInfo" rows="2"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+
+        <!-- Thank You Page -->
+        <div id="thankYouPage" class="mt-5 hidden">
+            <h2>Thank You for Your Response!</h2>
+            <button type="button" class="btn btn-warning mt-3" id="editButton">Click here to Edit</button>
+            <button type="button" class="btn btn-danger mt-3" id="deleteButton">Click here to Delete</button>
+            <button type="button" class="btn btn-secondary mt-3" id="exitButton">Exit to Home Page</button>
+        </div>
+
+        <!-- Looking for Job Section -->
+        <div id="lookingForJobSection" class="mt-5 hidden">
+            <h2>Available Job Opportunities</h2>
+            <select class="form-select mb-3" id="jobDropdown">
+                <option selected disabled>Select a Job Opportunity</option>
+                <option value="job1">Software Developer at XYZ Company</option>
+                <option value="job2">Marketing Manager at ABC Inc.</option>
+                <option value="job3">Data Analyst at DataCorp</option>
+                <!-- Add more job opportunities as needed -->
+            </select>
+        </div>
+
+        <!-- Job Details Page -->
+        <div id="jobDetailsPage" class="mt-5 hidden">
+            <h2>Job Details</h2>
+            <p id="jobDetailsText">Complete job details will be displayed here.</p>
+            <button type="button" class="btn btn-primary" id="applyButton">Apply</button>
+        </div>
+
+        <!-- Apply Section -->
+        <div id="applySection" class="mt-5 hidden">
+            <h2>Attach Your Documents</h2>
+            <p>You may attach your:</p>
+            <ul>
+                <li>CV/Resume</li>
+                <li>Portfolio</li>
+                <li>Social Media (Optional)</li>
+                <li>Contact Information to the provided Email ID</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        // Show the Post Job form
+        document.getElementById('postJobBtn').addEventListener('click', function() {
+            document.getElementById('postJobForm').classList.remove('hidden');
+            document.getElementById('lookingForJobSection').classList.add('hidden');
+            document.getElementById('thankYouPage').classList.add('hidden');
+        });
+
+        // Show the Looking for Job section
+        document.getElementById('lookingForJobBtn').addEventListener('click', function() {
+            document.getElementById('lookingForJobSection').classList.remove('hidden');
+            document.getElementById('postJobForm').classList.add('hidden');
+            document.getElementById('thankYouPage').classList.add('hidden');
+        });
+
+        // Show Thank You page upon form submission
+        document.getElementById('postJobForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('postJobForm').classList.add('hidden');
+            document.getElementById('thankYouPage').classList.remove('hidden');
+        });
+
+        // Exit button to redirect to the home page
+        document.getElementById('exitButton').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+
+        // Edit button functionality
+        document.getElementById('editButton').addEventListener('click', function() {
+            document.getElementById('thankYouPage').classList.add('hidden');
+            document.getElementById('postJobForm').classList.remove('hidden');
+        });
+
+        // Delete button functionality
+        document.getElementById('deleteButton').addEventListener('click', function() {
+            if (confirm('Are you sure you want to delete this job post?')) {
+                document.getElementById('thankYouPage').classList.add('hidden');
+                alert('Job post deleted successfully.');
+            }
+        });
+
+        // Display job details based on selected option
+        document.getElementById('jobDropdown').addEventListener('change', function() {
+            document.getElementById('jobDetailsPage').classList.remove('hidden');
+            document.getElementById('jobDetailsText').innerText = `Details for ${this.options[this.selectedIndex].text}`;
+        });
+
+        // Show Apply section upon clicking Apply button
+        document.getElementById('applyButton').addEventListener('click', function() {
+            document.getElementById('applySection').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html
+
+

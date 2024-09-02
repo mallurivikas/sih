@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institute Events</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f9;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        .containerr {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .event-section {
+            margin-bottom: 40px;
+        }
+
+        .event-section h2 {
+            border-bottom: 2px solid #04AA6D;
+            padding-bottom: 10px;
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .event-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            overflow-x: auto;
+            padding-bottom: 20px;
+        }
+
+        .event {
+            flex: 1 0 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: #fff;
+        }
+
+        .event img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .event-content {
+            padding: 15px;
+        }
+
+        .event-content h3 {
+            margin: 0;
+            font-size: 20px;
+            color: #04AA6D;
+        }
+
+        .event-content p {
+            margin: 5px 0;
+        }
+
+        .event-content .date {
+            font-weight: bold;
+        }
+
+        .event:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .event-section::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .event-section::-webkit-scrollbar-thumb {
+            background: #ddd;
+            border-radius: 8px;
+        }
+
+        .event-section::-webkit-scrollbar-thumb:hover {
+            background: #ccc;
+        }
+        
+
+
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">CONNECT APP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="containerr">
+        <h1>Institute Events</h1>
+
+        <div class="event-section" id="workshops">
+            <h2>Workshops</h2>
+            <div class="event-container">
+                <div class="event">
+                    <img src="./ml.jpg" alt="Advanced Machine Learning Workshop">
+                    <div class="event-content">
+                        <h3>Advanced Machine Learning Workshop</h3>
+                        <p class="date">Date: September 15, 2024</p>
+                        <p>Time: 10:00 AM - 4:00 PM</p>
+                        <p>Location: Room 204, Engineering Building</p>
+                        <p>Description: A hands-on workshop on advanced machine learning techniques and applications.</p>
+                    </div>
+                </div>
+                <div class="event">
+                    <img src="./cw.jpeg" alt="Creative Writing Workshop">
+                    <div class="event-content">
+                        <h3>Creative Writing Workshop</h3>
+                        <p class="date">Date: October 22, 2024</p>
+                        <p>Time: 2:00 PM - 5:00 PM</p>
+                        <p>Location: Room 101, Humanities Building</p>
+                        <p>Description: Enhance your creative writing skills with expert guidance and interactive sessions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="event-section" id="reunions">
+            <h2>Reunions</h2>
+            <div class="event-container">
+                <div class="event">
+                    <img src="./2.jpg" alt="Class of 2004 Reunion">
+                    <div class="event-content">
+                        <h3>Class of 2004 Reunion</h3>
+                        <p class="date">Date: November 10, 2024</p>
+                        <p>Time: 6:00 PM - 9:00 PM</p>
+                        <p>Location: Alumni Hall</p>
+                        <p>Description: A reunion for the Class of 2004 with dinner, speeches, and a chance to catch up with old friends.</p>
+                    </div>
+                </div>
+                <div class="event">
+                    <img src="./am.jpg" alt="Engineering Alumni Meetup">
+                    <div class="event-content">
+                        <h3>Engineering Alumni Meetup</h3>
+                        <p class="date">Date: December 5, 2024</p>
+                        <p>Time: 3:00 PM - 6:00 PM</p>
+                        <p>Location: Engineering Faculty Lounge</p>
+                        <p>Description: A meetup for engineering alumni to network and share their experiences since graduation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="event-section" id="professional-development">
+            <h2>Professional Development Sessions</h2>
+            <div class="event-container">
+                <div class="event">
+                    <img src="./leader.jpg" alt="Leadership Skills Seminar">
+                    <div class="event-content">
+                        <h3>Leadership Skills Seminar</h3>
+                        <p class="date">Date: September 30, 2024</p>
+                        <p>Time: 9:00 AM - 12:00 PM</p>
+                        <p>Location: Conference Room A</p>
+                        <p>Description: A seminar on developing leadership skills and strategies for career advancement.</p>
+                    </div>
+                </div>
+                <div class="event">
+                    <img src="./rm.jpeg" alt="Resume Building Workshop">
+                    <div class="event-content">
+                        <h3>Resume Building Workshop</h3>
+                        <p class="date">October 18, 2024</p>
+                        <p>Time: 1:00 PM - 3:00 PM</p>
+                        <p>Location: Career Services Center</p>
+                        <p>Description: Learn how to create an effective resume that stands out to employers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
